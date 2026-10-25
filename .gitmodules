@@ -4,9 +4,6 @@
 [submodule "deps/detours"]
 	path = deps/detours
 	url = https://github.com/microsoft/Detours.git
-[submodule "deps/red4ext.sdk"]
-	path = deps/red4ext.sdk
-	url = https://github.com/jackhumbert/RED4ext.SDK.git
 [submodule "deps/cpcmake"]
 	path = deps/cpcmake
 	url = https://github.com/jackhumbert/cyberpunk_cmake.git

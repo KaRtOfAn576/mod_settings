@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cyberpunk 2077 Game Patch Versions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+    <script>
+game_versions =  {
+  "3.0.58.35694" : "1.50",
+  "3.0.58.60196" : "1.50 Hotfix 1",
+  "3.0.58.63411" : "1.52 Hotfix 2",
+  "3.0.59.40169" : "1.52",
+  "3.0.60.40169" : "1.52 Hotfix 1",
+  "3.0.64.38113" : "1.60",
+  "3.0.66.28510" : "1.61",
+  "3.0.68.49653" : "1.61 Hotfix 1",
+  "3.0.70.58535" : "1.62",
+  "3.0.71.13361" : "1.62 Hotfix 1",
+  "3.0.72.45053" : "1.63",
+  "3.0.72.54038" : "1.63 Hotfix 1",
+  "3.0.74.53121" : "2.00",
+  "3.0.74.63017" : "2.01",
+  "3.0.75.25522" : "2.02",
+  "3.0.76.04238" : "2.10",
+  "3.0.76.41558" : "2.11",
+  "3.0.76.55031" : "2.12",
+  "3.0.76.64179" : "2.12 Hotfix 1",
+  "3.0.77.64623" : "2.13",
+  "3.0.78.41888" : "2.20",
+  "3.0.78.57301" : "2.21"
+};
+table_data = Object.keys(game_versions).map(key =>{
+  return {
+    "FileVersion": key,
+    "GameVersion": game_versions[key]
+  }
+}).reverse();
+    </script>
+  </head>
+  <body>
+    <div class="container">
+    <h1>Cyberpunk 2077 Game Patch Versions</h1>
+    <p>Find your File Version:
+      <ol>
+        <li>Locate <code>Cyberpunk2077.exe</code> in your game directory at <code>bin/x64/Cyberpunk2077.exe</code></li>
+        <li>Right-click and select <strong>Properties</strong></li>
+        <li>Select the <strong>Details</strong> tab</li>
+        <li>Look for <strong>File version</strong> in the table - it should match one of the numbers below</li>
+      </ol>
+    </p>
+    <p>Last updated 2025-06-18 01:54:25 UTC</p>
+    <table class="table-striped">
+      <thead>
+        <tr>
+          <th data-field="FileVersion">File Version</th>
+          <th data-field="GameVersion">Game Patch Version</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>    
+    <script>
+      $(document).ready(function () {
+        $('table').bootstrapTable({
+          data: table_data
+        });
+      });
+    </script>
+  </body>
+</html>
